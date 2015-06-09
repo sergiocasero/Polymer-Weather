@@ -1,0 +1,55 @@
+<link rel="import" href="../paper-styles/paper-styles.html">
+<dom-module id="sergio-current">
+	<style is="custom-style">
+		:host{
+			position: absolute;
+			bottom: 15px;
+			right: 15px;
+			text-align: right;
+		}
+		span{
+			display: block;
+		}
+		.city{
+			font-size:5em;
+			font-weight: bold;
+			color: white;
+      		font-family: 'Roboto', 'Noto';
+      		text-shadow: 0px 0px 5px black;
+		}
+		.desc, .humidity{
+			font-size: 2em;
+			color: white;
+      		font-family: 'Roboto', 'Noto';
+      		text-shadow: 0px 0px 5px black;
+		}
+		.temp{
+			font-size: 6.8em;
+			font-weight: bold;
+			color: white;
+      		font-family: 'Roboto', 'Noto';
+      		text-shadow: 0px 0px 5px black;
+		}
+	</style>
+	<template>
+		<span class="humidity">{{humidity}}</span>
+		<span class="desc">{{desc}}</span>
+		<span class="city">{{city}}</span>
+		<span class="temp">{{temp}}</span>
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: 'sergio-current',
+		properties: {
+			humidity: Number,
+			temp: Number,
+			desc: String,
+			city: String
+		},
+		ready: function(){
+
+		}
+	});
+</script>
